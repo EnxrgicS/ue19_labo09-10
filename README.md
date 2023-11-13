@@ -27,4 +27,4 @@ python app.py
 ```
 
 ## Licence
-Ce projet est sous licence MIT - consultez le fichier LICENSE pour plus de détails.
+Ce projet est sous licence MIT - consultez le fichier LICENCE pour plus de détails.
