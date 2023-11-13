@@ -19,7 +19,6 @@ cd ue19_labo09-10
 pip install -r requirements.txt
 ```
 
-## Deux choix d'utilisation
 ## Utilisation avec Docker
 1. Construisez l'image Docker :
 ```bash
@@ -31,11 +30,6 @@ docker image build . -t "ma_petite_api"
 docker container run -p 8000:8000 -t ma_petite_api:latest
 ```
 
-## Utilisation avec Terminale
-Pour exécuter l'application et afficher un jeu de mot, utilisez la commande suivante :
-```bash
-uvicorn app.py:app --reload
-```
 Accédez à l'API dans votre navigateur à l'adresse http://127.0.0.1:8000/ pour voir les jeux de mots.
 
 ## Licence
