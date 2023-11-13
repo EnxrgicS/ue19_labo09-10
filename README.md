@@ -19,8 +19,19 @@ cd ue19_labo09-10
 pip install -r requirements.txt
 ```
 
+## Deux choix d'utilisation
+## Utilisation avec Docker
+1. Construisez l'image Docker :
+```bash
+docker image build . -t "ma_petite_api"
+```
 
-## Comment Utiliser
+2.Exécutez le conteneur Docker :
+```bash
+docker container run -t ma_petite_api:latest -p 8000:8000
+```
+
+## Utilisation avec Terminale
 Pour exécuter l'application et afficher un jeu de mot, utilisez la commande suivante :
 ```bash
 uvicorn app.py:app --reload
