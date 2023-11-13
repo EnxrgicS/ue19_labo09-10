@@ -28,7 +28,7 @@ docker image build . -t "ma_petite_api"
 
 2.Exécutez le conteneur Docker :
 ```bash
-docker container run -t ma_petite_api:latest -p 8000:8000
+docker container run -p 8000:8000 -t ma_petite_api:latest
 ```
 
 ## Utilisation avec Terminale
