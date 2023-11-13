@@ -1,12 +1,12 @@
 # ue19_labo09-10
 
-Ce code est une application Python 3 qui utilise la librairie requests pour interroger un service d'API public. Le service en question est  PunAPI, et il permet d'afficher un jeu de mot.
+Ce code est une application Python 3 qui utilise la librairie requests pour interroger un service d'API public. L'application est construite avec FastAPI et Uvicorn, et elle interagit avec le service PunAPI pour afficher un jeu de mot.
 
 ## Comment Installer
 
 1. Clonez le dépôt :
 ```bash
-git clone https://github.com/votre_utilisateur/ue19_labo09-10.git
+git clone https://github.com/EnxrgicS/ue19_labo09-10.git
 ```
 
 2. Naviguer dans le repertoire du projet :
@@ -23,8 +23,9 @@ pip install -r requirements.txt
 ## Comment Utiliser
 Pour exécuter l'application et afficher un jeu de mot, utilisez la commande suivante :
 ```bash
-python app.py
+uvicorn app.py:app --reload
 ```
+Accédez à l'API dans votre navigateur à l'adresse http://127.0.0.1:8000/ pour voir les jeux de mots.
 
 ## Licence
 Ce projet est sous licence MIT - consultez le fichier LICENCE pour plus de détails.
