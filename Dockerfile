@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt && rm requirements.txt
 
 # Copier les fichiers source dans le conteneur
-COPY src .
+COPY ue19_labo09-10 .
 
 # Exposer le port utilisé par l'application
 EXPOSE 8000
