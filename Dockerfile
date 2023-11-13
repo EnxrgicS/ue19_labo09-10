@@ -19,5 +19,8 @@ COPY . .
 # Exposer le port utilisé par l'application
 EXPOSE 8000
 
+# Définir le PATH
+ENV PATH="/home/user/.local/bin:${PATH}"
+
 # Commande pour lancer l'application
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
