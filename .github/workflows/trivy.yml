@@ -1,0 +1,32 @@
+name: Trivy Vulnerability Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly schedule on Monday
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t ghcr.io/your-username/your-repo:main .
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@v1
+        with:
+          image-ref: 'ghcr.io/your-username/your-repo:main'
+          format: 'table'
+          exit-code: '1'
