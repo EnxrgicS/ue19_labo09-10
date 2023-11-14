@@ -66,8 +66,9 @@ jobs:
       - name: Run Trivy scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}:${{ steps.docker_metadata.outputs.tags }}
+          image-ref: ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}
           scan-type: "image"
+
 
       - name: Sign Published Docker Image
         if: ${{ github.event_name != 'pull_request' }}
